@@ -4,8 +4,10 @@
     {
         public int Id { get; set; }
         public String Name { get; set; }
-
         public String Gym { get; set; }
+
+        public Country Country { get; set; }
+
     }
 
 }
