@@ -44,5 +44,17 @@ namespace webApi_Project.Controllers
             return Ok(pokemon);
         }
 
+        [HttpGet("{name}")]
+        [ProducesResponseType(200, Type = typeof(Pokemon))]
+        [ProducesResponseType(400)]
+
+        public IActionResult GetPokemonByName(string name)
+        {
+            var pokemon = mapper.Map<PokemonDto>(pokemonRepository.GetPokemon(name));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(pokemon);
+        }
+
     }
 }

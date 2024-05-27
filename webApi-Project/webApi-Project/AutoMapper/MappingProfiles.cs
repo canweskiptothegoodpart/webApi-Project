@@ -9,6 +9,7 @@ namespace webApi_Project.AutoMapper
         public MappingProfiles()
         {
             CreateMap<Pokemon, PokemonDto>();
+            CreateMap<Category, CategoryDto>();
         }
     }
 }
