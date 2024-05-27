@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "5ogbAmB0UKiU/uUiCcbTPYbzdY77AK9AXwLAbhl5VRM7Y5MjH6MixOJzQYmpaxgO1upIFiQWp6o99j6admJnkg==",
+  "dgSpecHash": "J5UC8uTzK24XMJlOaEMWOJCHRh5HmPuZI9BVSQqIo+OsUNu8baHhFqzlJo6OdLssTBYzR9khD4KpWisd7PrNcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\Desktop\\webApi-Project\\webApi-Project\\webApi-Project\\webApi-Project.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.1\\microsoft.entityframeworkcore.6.0.1.nupkg.sha512",
