@@ -10,6 +10,7 @@ namespace webApi_Project.AutoMapper
         {
             CreateMap<Pokemon, PokemonDto>();
             CreateMap<Category, CategoryDto>();
+            CreateMap<Country, CountryDto>();
         }
     }
 }
