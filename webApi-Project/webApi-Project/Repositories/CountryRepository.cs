@@ -32,6 +32,14 @@ namespace webApi_Project.Repositories
             return context.Countries.Where(c => c.Name == name).FirstOrDefault();
         }
 
-        
+        public Country GetCountryByOwner(int ownerId)
+        {
+            return context.Owners.Where(o => o.Id == ownerId).Select(c => c.Country).FirstOrDefault();
+        }
+
+        public ICollection<Owner> GetOwnerByCountry(int countryId)
+        {
+            return context.Owners.Where(c => c.Country.Id == countryId).ToList();
+        }
     }
 }

@@ -46,8 +46,17 @@ namespace webApi_Project.Controllers
             return Ok(country);
         }
 
-        
+        [HttpGet("/owners/{ownerId}")]
+        [ProducesResponseType(200, Type = typeof(Country))]
+        [ProducesResponseType(400)]
 
+        public IActionResult GetCountryByOnwerId(int ownerId)
+        {
+            var country = mapper.Map<CountryDto>(countryRepository.GetCountryByOwner(ownerId));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(country);
+        }
 
     }
 }
