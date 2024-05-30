@@ -7,6 +7,6 @@ namespace webApi_Project.Interfaces
         ICollection<Reviewer> GetReviewers();
         Reviewer GetReviewer(int id);
         ICollection<Review> GetReviewsByReviewerId(int reviewerId);
-        Reviewer GetReviewerByReviewId(int reviewId);
+        bool ReviewerExists(int id);
     }
 }
