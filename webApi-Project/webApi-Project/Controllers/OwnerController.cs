@@ -48,8 +48,35 @@ namespace webApi_Project.Controllers
         }
 
 
+        [HttpGet("/owner/{pokemonId}")]
+        [ProducesResponseType(200, Type = typeof(Owner))]
+        [ProducesResponseType(400)]
 
-        
+        public IActionResult GetOwnersByPokemonId(int pokemonId)
+        {
+            var owners = mapper.Map<List<OwnerDto>>(ownerRepository.GetOwnerByPokemonId(pokemonId));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(owners);
+        }
+
+
+        [HttpGet("/pokemon/{ownerId}")]
+        [ProducesResponseType(200, Type = typeof(Owner))]
+        [ProducesResponseType(400)]
+
+        public IActionResult GetPokemonsByOwnerId(int ownerId)
+        {
+            var pokemons = mapper.Map<List<PokemonDto>>(ownerRepository.GetPokemonsByOwnerId(ownerId));
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            return Ok(pokemons);
+           
+
+
+        }
+
+
 
 
     }
