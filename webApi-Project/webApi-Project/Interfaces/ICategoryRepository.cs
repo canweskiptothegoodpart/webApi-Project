@@ -8,5 +8,7 @@ namespace webApi_Project.Interfaces
         Category GetCategory(int id);
         ICollection<Pokemon> GetPokemonByCategory(int categoryId);
         bool CategoryExist(int id);
+        bool CategoryCreate(Category category);
+        bool Save();
     }
 }
