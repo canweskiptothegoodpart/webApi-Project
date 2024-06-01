@@ -12,6 +12,12 @@ namespace webApi_Project.Repositories
             this.context = context;
         }
 
+        public bool CountryCreate(Country country)
+        {
+            context.Add(country);
+            return Save();
+        }
+
         public bool CountryExists(int id)
         {
             return context.Countries.Any(c => c.Id == id);
@@ -40,6 +46,12 @@ namespace webApi_Project.Repositories
         public ICollection<Owner> GetOwnerByCountry(int countryId)
         {
             return context.Owners.Where(c => c.Country.Id == countryId).ToList();
+        }
+
+        public bool Save()
+        {
+            var saved = context.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

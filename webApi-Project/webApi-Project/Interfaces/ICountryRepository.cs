@@ -10,5 +10,7 @@ namespace webApi_Project.Interfaces
         Country GetCountryByOwner(int ownerId);
         ICollection<Owner> GetOwnerByCountry(int countryId);
         bool CountryExists(int id);
+        bool CountryCreate(Country country);
+        bool Save();
     }
 }
