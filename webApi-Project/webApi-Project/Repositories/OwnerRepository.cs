@@ -33,9 +33,21 @@ namespace webApi_Project.Repositories
             return context.PokemonOwners.Where(po => po.OwnerId == ownerId).Select(p => p.Pokemon).ToList();
         }
 
+        public bool OwnerCreate(Owner owner)
+        {
+            context.Add(owner);
+            return Save();
+        }
+
         public bool OwnerExists(int ownerId)
         {
             return context.Owners.Any(o => o.Id == ownerId);
+        }
+
+        public bool Save()
+        {
+            var saved = context.SaveChanges();
+            return saved > 0 ? true : false;
         }
     }
 }

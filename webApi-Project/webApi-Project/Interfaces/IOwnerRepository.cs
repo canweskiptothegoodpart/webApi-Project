@@ -9,6 +9,8 @@ namespace webApi_Project.Interfaces
         ICollection<Pokemon> GetPokemonsByOwnerId(int ownerId);
         ICollection<Owner> GetOwnerByPokemonId(int pokemonId);
         bool OwnerExists(int ownerId);
+        bool OwnerCreate(Owner owner);
+        bool Save();
 
     }
 }
